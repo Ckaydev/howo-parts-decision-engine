@@ -1,0 +1,40 @@
+{
+  "query": {
+    "mentioned_name": "brake chamber",
+    "confirmed_part_numbers": [],
+    "observed_part_numbers": [],
+    "label_texts": ["rear spring brake"],
+    "visual_features": ["four mounting studs", "long push rod"],
+    "fitment_terms": ["rear axle"]
+  },
+  "products": [
+    {
+      "product_id": "prd_front_chamber",
+      "canonical_name": "Front brake chamber",
+      "primary_part_number": "WG9000360600",
+      "aliases": "front brake actuator"
+    },
+    {
+      "product_id": "prd_rear_chamber",
+      "canonical_name": "Rear brake chamber",
+      "primary_part_number": "WG9000360700",
+      "aliases": "rear brake actuator"
+    }
+  ],
+  "evidence_profiles": [
+    {
+      "product_id": "prd_front_chamber",
+      "label_terms": ["front service chamber"],
+      "visual_features": ["two mounting studs", "short push rod"],
+      "fitment_terms": ["front axle"],
+      "observation_ids": ["obs_front_example"]
+    },
+    {
+      "product_id": "prd_rear_chamber",
+      "label_terms": ["rear spring brake"],
+      "visual_features": ["four mounting studs", "long push rod"],
+      "fitment_terms": ["rear axle"],
+      "observation_ids": ["obs_rear_example"]
+    }
+  ]
+}

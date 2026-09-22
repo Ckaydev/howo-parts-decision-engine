@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.howo.example/schemas/capture-envelope.schema.json",
+  "title": "Capture Envelope",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "capture_id",
+    "channel",
+    "channel_message_id",
+    "captured_at",
+    "ingested_at",
+    "sender_id",
+    "media_type",
+    "processing_status"
+  ],
+  "properties": {
+    "capture_id": {"type": "string", "minLength": 1},
+    "channel": {"type": "string", "minLength": 1},
+    "channel_message_id": {"type": "string", "minLength": 1},
+    "captured_at": {"type": "string", "format": "date-time"},
+    "ingested_at": {"type": "string", "format": "date-time"},
+    "sender_id": {"type": "string", "minLength": 1},
+    "raw_text": {"type": ["string", "null"]},
+    "media_type": {
+      "enum": ["none", "image", "voice", "audio", "document", "video"]
+    },
+    "media_original_ref": {"type": ["string", "null"]},
+    "media_archive_url": {"type": ["string", "null"]},
+    "transcript": {"type": ["string", "null"]},
+    "processing_status": {
+      "enum": ["received", "extracting", "needs_review", "structured", "failed"]
+    },
+    "processing_error": {"type": ["string", "null"]}
+  },
+  "anyOf": [
+    {"required": ["raw_text"], "properties": {"raw_text": {"minLength": 1}}},
+    {"required": ["transcript"], "properties": {"transcript": {"minLength": 1}}},
+    {"properties": {"media_type": {"not": {"const": "none"}}}}
+  ]
+}

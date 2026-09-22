@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.howo.example/schemas/review-resolution-request.schema.json",
+  "title": "Human Review Resolution Request",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["review_item", "decision", "products", "part_numbers", "image_evidence"],
+  "properties": {
+    "review_item": {"type": "object"},
+    "decision": {
+      "type": "object",
+      "required": ["review_id", "capture_id", "action", "reviewer", "reviewed_at"],
+      "properties": {
+        "review_id": {"type": "string", "minLength": 1},
+        "capture_id": {"type": "string", "minLength": 1},
+        "action": {"enum": ["link_existing", "create_provisional", "reject"]},
+        "product_id": {"type": "string"},
+        "canonical_name": {"type": "string"},
+        "identity_confidence": {"type": "number", "minimum": 0, "maximum": 1},
+        "accept_image_evidence_ids": {"type": "array", "items": {"type": "string"}},
+        "reject_image_evidence_ids": {"type": "array", "items": {"type": "string"}},
+        "confirmed_part_numbers": {"type": "array", "items": {"type": "object"}},
+        "reviewer": {"type": "string", "minLength": 1},
+        "reviewed_at": {"type": "string", "format": "date-time"},
+        "notes": {"type": "string"}
+      }
+    },
+    "products": {"type": "array", "items": {"type": "object"}},
+    "part_numbers": {"type": "array", "items": {"type": "object"}},
+    "image_evidence": {"type": "array", "items": {"type": "object"}}
+  }
+}

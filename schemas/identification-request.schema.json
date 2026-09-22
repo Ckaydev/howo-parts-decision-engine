@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.howo.example/schemas/identification-request.schema.json",
+  "title": "Internal Product Identification Request",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["query", "products", "evidence_profiles"],
+  "properties": {
+    "query": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "mentioned_name": {"type": ["string", "null"]},
+        "confirmed_part_numbers": {"type": "array", "items": {"type": "string", "minLength": 1}},
+        "observed_part_numbers": {"type": "array", "items": {"type": "string", "minLength": 1}},
+        "label_texts": {"type": "array", "items": {"type": "string", "minLength": 1}},
+        "visual_features": {"type": "array", "items": {"type": "string", "minLength": 1}},
+        "fitment_terms": {"type": "array", "items": {"type": "string", "minLength": 1}}
+      },
+      "anyOf": [
+        {"required": ["mentioned_name"], "properties": {"mentioned_name": {"type": "string", "minLength": 1}}},
+        {"required": ["confirmed_part_numbers"], "properties": {"confirmed_part_numbers": {"minItems": 1}}},
+        {"required": ["observed_part_numbers"], "properties": {"observed_part_numbers": {"minItems": 1}}},
+        {"required": ["label_texts"], "properties": {"label_texts": {"minItems": 1}}},
+        {"required": ["visual_features"], "properties": {"visual_features": {"minItems": 1}}},
+        {"required": ["fitment_terms"], "properties": {"fitment_terms": {"minItems": 1}}}
+      ]
+    },
+    "products": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["product_id", "canonical_name"],
+        "properties": {
+          "product_id": {"type": "string", "minLength": 1},
+          "canonical_name": {"type": "string", "minLength": 1},
+          "primary_part_number": {"type": ["string", "null"]},
+          "aliases": {"oneOf": [{"type": "string"}, {"type": "array", "items": {"type": "string"}}]},
+          "additional_part_numbers": {"oneOf": [{"type": "string"}, {"type": "array", "items": {"type": "string"}}]},
+          "identity_status": {"type": "string"}
+        }
+      }
+    },
+    "evidence_profiles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["product_id"],
+        "properties": {
+          "product_id": {"type": "string", "minLength": 1},
+          "label_terms": {"oneOf": [{"type": "string"}, {"type": "array", "items": {"type": "string"}}]},
+          "visual_features": {"oneOf": [{"type": "string"}, {"type": "array", "items": {"type": "string"}}]},
+          "fitment_terms": {"oneOf": [{"type": "string"}, {"type": "array", "items": {"type": "string"}}]},
+          "observation_ids": {"oneOf": [{"type": "string"}, {"type": "array", "items": {"type": "string"}}]}
+        }
+      }
+    }
+  }
+}

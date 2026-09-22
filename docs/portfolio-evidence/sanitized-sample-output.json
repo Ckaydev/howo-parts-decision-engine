@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "capture": {
+    "capture_id": "cap_telegram_1001",
+    "processing_status": "structured"
+  },
+  "extraction_validation": {
+    "status": "passed",
+    "issues": []
+  },
+  "match": {
+    "status": "matched",
+    "confidence": 1.0,
+    "reason": "exact_part_number",
+    "product_id": "prd_0001",
+    "questions_needed": []
+  },
+  "rows": {
+    "observations": [
+      {
+        "observation_id": "obs_2422c7f8fdedf76d70e6",
+        "capture_id": "cap_telegram_1001",
+        "product_id": "prd_0001",
+        "claim_type": "variant",
+        "claim_text": "The part also comes in a different mounting style.",
+        "evidence_class": "user_reported",
+        "confidence": 0.72,
+        "review_status": "unreviewed"
+      }
+    ],
+    "part_numbers": [
+      {
+        "part_number_id": "pn_8308497b4b0ef80a15f1",
+        "product_id": "prd_0001",
+        "raw_part_number": "WG9000360600",
+        "normalized_part_number": "WG9000360600",
+        "number_type": "captured",
+        "status": "unreviewed",
+        "confidence": 1.0
+      }
+    ],
+    "review_queue": []
+  }
+}

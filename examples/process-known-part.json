@@ -1,0 +1,47 @@
+{
+  "capture": {
+    "capture_id": "cap_telegram_1001",
+    "channel": "telegram",
+    "channel_message_id": "1001",
+    "captured_at": "2026-08-27T10:00:00+01:00",
+    "ingested_at": "2026-08-27T10:00:05+01:00",
+    "sender_id": "123456789",
+    "raw_text": "The front brake chamber WG9000360600 also comes in a different mounting style.",
+    "media_type": "none",
+    "media_original_ref": null,
+    "media_archive_url": null,
+    "transcript": null,
+    "processing_status": "received",
+    "processing_error": null
+  },
+  "extraction": {
+    "summary": "A mounting-style variant was reported for a front brake chamber.",
+    "product_reference": {
+      "mentioned_name": "front brake chamber",
+      "mentioned_part_numbers": ["WG9000360600"]
+    },
+    "claims": [
+      {
+        "claim_type": "variant",
+        "claim_text": "The part also comes in a different mounting style.",
+        "structured_value": {"distinguishing_attribute": "mounting_style"},
+        "evidence_class": "user_reported",
+        "confidence": 0.72,
+        "variant_name": null
+      }
+    ],
+    "follow_up_questions": [
+      "What are the mounting differences and corresponding part numbers?"
+    ]
+  },
+  "products": [
+    {
+      "product_id": "prd_0001",
+      "canonical_name": "Front brake chamber",
+      "primary_part_number": "WG9000360600",
+      "aliases": ["front brake actuator"],
+      "additional_part_numbers": [],
+      "identity_status": "confirmed"
+    }
+  ]
+}

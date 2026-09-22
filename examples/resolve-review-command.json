@@ -1,0 +1,39 @@
+{
+  "message": {
+    "text": "/resolve rev_capture_1 link prd_rear_chamber --accept-image --pn=WG9000360700",
+    "reply_text": "",
+    "sender_id": "123456789",
+    "chat_id": "123456789",
+    "message_id": "44",
+    "sent_at": "2026-09-21T11:00:00+01:00"
+  },
+  "review_queue": [
+    {
+      "review_id": "rev_capture_1",
+      "capture_id": "cap_1",
+      "proposed_product_id": "prd_rear_chamber",
+      "candidate_matches": "[]",
+      "reason": "visual_match_requires_review",
+      "questions_needed": "[]",
+      "status": "open",
+      "reviewed_at": ""
+    }
+  ],
+  "products": [
+    {
+      "product_id": "prd_rear_chamber",
+      "canonical_name": "Rear brake chamber",
+      "identity_status": "confirmed"
+    }
+  ],
+  "part_numbers": [],
+  "image_evidence": [
+    {
+      "image_evidence_id": "img_capture_1",
+      "attachment_id": "att_capture_1",
+      "capture_id": "cap_1",
+      "product_id": "",
+      "review_status": "pending"
+    }
+  ]
+}

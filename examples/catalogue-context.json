@@ -1,0 +1,56 @@
+{
+  "products": [
+    {
+      "product_id": "prd_rear_chamber",
+      "canonical_name": "Rear brake chamber",
+      "primary_part_number": "WG9000360700",
+      "aliases": "rear brake actuator",
+      "additional_part_numbers": "",
+      "identity_status": "confirmed"
+    }
+  ],
+  "part_numbers": [
+    {
+      "part_number_id": "pn_rear_cross_ref",
+      "product_id": "prd_rear_chamber",
+      "raw_part_number": "AZ9000360700",
+      "normalized_part_number": "AZ9000360700",
+      "number_type": "cross_reference",
+      "status": "confirmed",
+      "confidence": 1,
+      "observation_id": "obs_cross_ref"
+    }
+  ],
+  "image_evidence": [
+    {
+      "image_evidence_id": "img_rear_label",
+      "attachment_id": "att_rear_label",
+      "capture_id": "cap_rear_label",
+      "product_id": "prd_rear_chamber",
+      "variant_id": "",
+      "view_type": "label",
+      "visible_label_text": "rear spring brake",
+      "ocr_text": "{}",
+      "evidence_class": "observed",
+      "confidence": 0.96,
+      "review_status": "accepted",
+      "observed_at": "2026-09-09T10:15:00+01:00",
+      "observation_id": "obs_rear_label"
+    }
+  ],
+  "visual_features": [
+    {
+      "feature_id": "feat_rear_mounting",
+      "image_evidence_id": "img_rear_label",
+      "product_id": "prd_rear_chamber",
+      "variant_id": "",
+      "feature_type": "mounting",
+      "feature_name": "mounting studs",
+      "feature_value": "4",
+      "units": "",
+      "evidence_class": "observed",
+      "confidence": 0.93,
+      "observation_id": "obs_rear_mounting"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "capture_id": "cap_telegram_example_21",
+  "attachment_id": "att_telegram_example_21",
+  "captured_at": "2026-09-09T10:15:00+01:00",
+  "visual_extraction": {
+    "summary": "The image shows a round chamber with four mounting studs and a label containing WG9000360700.",
+    "image_quality": "clear",
+    "view_type": "full_item",
+    "observed_part_numbers": [
+      {"raw_text": "WG9000360700", "region": "label", "confidence": 0.96}
+    ],
+    "label_texts": [
+      {"raw_text": "SINOTRUK", "region": "label", "confidence": 0.91}
+    ],
+    "visual_features": [
+      {"feature_type": "mounting", "feature_name": "mounting studs", "feature_value": "4", "units": null, "confidence": 0.93},
+      {"feature_type": "shape", "feature_name": "housing shape", "feature_value": "round", "units": null, "confidence": 0.88}
+    ],
+    "fitment_terms": [],
+    "questions_needed": ["Confirm the OCR-observed part number against the physical label."]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/howo/review-command-request.schema.json",
+  "title": "Telegram review command request",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "message",
+    "review_queue",
+    "products",
+    "part_numbers",
+    "image_evidence"
+  ],
+  "properties": {
+    "message": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["text", "sender_id", "chat_id", "message_id", "sent_at"],
+      "properties": {
+        "text": { "type": "string", "minLength": 1 },
+        "reply_text": { "type": "string" },
+        "sender_id": { "type": "string", "minLength": 1 },
+        "chat_id": { "type": "string", "minLength": 1 },
+        "message_id": { "type": "string", "minLength": 1 },
+        "sent_at": { "type": "string", "format": "date-time" }
+      }
+    },
+    "review_queue": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "products": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "part_numbers": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "image_evidence": {
+      "type": "array",
+      "items": { "type": "object" }
+    }
+  }
+}

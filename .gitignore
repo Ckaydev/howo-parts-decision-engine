@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+dist/
+build/
+
+# Node and generated caches
+node_modules/
+.npm/
+.pnpm-store/
+.cache/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.secret
+*.pem
+*.key
+*.p12
+credentials/
+
+# Editors and operating systems
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Local runtime and temporary files
+.work/
+tmp/
+*.log
+*.sqlite
+*.db
+
+# Operational exports may contain live IDs or credential references
+outputs/n8n-backups/
+*-live-*.json
+
+# Workbook inspection intermediates
+outputs/**/*.inspect.ndjson
+outputs/*/preview-*.png

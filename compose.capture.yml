@@ -1,0 +1,17 @@
+services:
+  howo-capture:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: howo-capture
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8765:8765"
+    networks:
+      - default
+      - n8n
+
+networks:
+  n8n:
+    external: true
+    name: n8n-network

@@ -1,0 +1,48 @@
+{
+  "review_item": {
+    "review_id": "rev_capture_1",
+    "capture_id": "cap_1",
+    "proposed_product_id": "prd_rear_chamber",
+    "candidate_matches": "[]",
+    "reason": "visual_match_requires_review",
+    "questions_needed": "[]",
+    "status": "open",
+    "reviewed_at": ""
+  },
+  "decision": {
+    "review_id": "rev_capture_1",
+    "capture_id": "cap_1",
+    "action": "link_existing",
+    "product_id": "prd_rear_chamber",
+    "identity_confidence": 0.95,
+    "accept_image_evidence_ids": ["img_capture_1"],
+    "confirmed_part_numbers": [
+      {
+        "raw_part_number": "WG9000360700",
+        "number_type": "oem",
+        "verified_by_human": true,
+        "source_reference": "clear label photo img_capture_1"
+      }
+    ],
+    "reviewer": "owner",
+    "reviewed_at": "2026-09-21T10:00:00+01:00",
+    "notes": "Physical label and mounting layout checked."
+  },
+  "products": [
+    {
+      "product_id": "prd_rear_chamber",
+      "canonical_name": "Rear brake chamber",
+      "identity_status": "confirmed"
+    }
+  ],
+  "part_numbers": [],
+  "image_evidence": [
+    {
+      "image_evidence_id": "img_capture_1",
+      "attachment_id": "att_capture_1",
+      "capture_id": "cap_1",
+      "product_id": "",
+      "review_status": "unreviewed"
+    }
+  ]
+}

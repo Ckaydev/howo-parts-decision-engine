@@ -1,0 +1,53 @@
+{
+  "capture_id": "cap_telegram_example_21",
+  "attachment_id": "att_telegram_example_21",
+  "captured_at": "2026-09-09T10:15:00+01:00",
+  "text_reference": {
+    "mentioned_name": "rear brake chamber",
+    "confirmed_part_numbers": []
+  },
+  "visual_extraction": {
+    "summary": "The image shows a round chamber with four mounting studs and a label containing WG9000360700.",
+    "image_quality": "clear",
+    "view_type": "full_item",
+    "observed_part_numbers": [
+      {"raw_text": "WG9000360700", "region": "label", "confidence": 0.96}
+    ],
+    "label_texts": [
+      {"raw_text": "rear spring brake", "region": "label", "confidence": 0.91}
+    ],
+    "visual_features": [
+      {"feature_type": "mounting", "feature_name": "mounting studs", "feature_value": "4", "units": null, "confidence": 0.93},
+      {"feature_type": "shape", "feature_name": "housing shape", "feature_value": "round", "units": null, "confidence": 0.88}
+    ],
+    "fitment_terms": [
+      {"term": "rear axle", "confidence": 0.8}
+    ],
+    "questions_needed": ["Confirm the OCR-observed part number against the physical label."]
+  },
+  "products": [
+    {
+      "product_id": "prd_front_chamber",
+      "canonical_name": "Front brake chamber",
+      "primary_part_number": "WG9000360600",
+      "aliases": "front brake actuator",
+      "identity_status": "confirmed"
+    },
+    {
+      "product_id": "prd_rear_chamber",
+      "canonical_name": "Rear brake chamber",
+      "primary_part_number": "WG9000360700",
+      "aliases": "rear brake actuator",
+      "identity_status": "confirmed"
+    }
+  ],
+  "evidence_profiles": [
+    {
+      "product_id": "prd_rear_chamber",
+      "label_terms": ["rear spring brake"],
+      "visual_features": ["mounting studs: 4", "housing shape: round"],
+      "fitment_terms": ["rear axle"],
+      "observation_ids": ["obs_rear_example"]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.howo.example/schemas/catalogue-context-request.schema.json",
+  "title": "Reviewed Catalogue Context Request",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["products", "part_numbers", "image_evidence", "visual_features"],
+  "properties": {
+    "products": {"type": "array", "items": {"type": "object"}},
+    "part_numbers": {"type": "array", "items": {"type": "object"}},
+    "image_evidence": {"type": "array", "items": {"type": "object"}},
+    "visual_features": {"type": "array", "items": {"type": "object"}}
+  }
+}
